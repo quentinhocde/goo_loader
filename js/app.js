@@ -1,8 +1,9 @@
-
+// VARS
 var ball = document.getElementById('ball');
 var wrapper = document.getElementById('wrapper');
 var launch;
 
+// When dom is loaded :
 document.addEventListener("DOMContentLoaded", function(event) { 
 //	wrapper.addEventListener('click',createBall);	
   var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
@@ -21,20 +22,20 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 });
 
-
+// Function to create a ball
 function createBall(e){
 	launch=true;
 	var myBall = new Ball('50%','50%');
 	myBall.display();
 }
 
-
+// Constructor of Ball
 function Ball(x,y){
 	this.left=x;
 	this.top=y;
 }
 
-
+// Prototype of Ball
 Ball.prototype.display = function(){
 	var self = this;
 
@@ -66,17 +67,17 @@ Ball.prototype.display = function(){
   },300);
 }
 
+// Function to destroy a ball
 function destroy(myBall){
 	wrapper.removeChild(myBall);
   
 }
 
+// Function to move a ball
 function ballMove(myBall){
-	
 		TweenLite.to(myBall,2,{y:'-50%',x:'-50%',top:'50%',left:'50%',scale:0.7,onComplete:destroyBall,ease:Quad.easeInOut});
 		function destroyBall(){
 			destroy(myBall);
 		}
-
 }
 
