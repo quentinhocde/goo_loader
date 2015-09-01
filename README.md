@@ -8,6 +8,10 @@ I use the full css method see on <a href="https://css-tricks.com/gooey-effect/">
 
 <a href="http://codepen.io/quentinhocde/full/EaMyZg">http://codepen.io/quentinhocde/full/EaMyZg</a>
 
+## Version
+
+1.0.0
+
 
 
 
